@@ -1,18 +1,15 @@
 #
 # TODO there's not a single word about startup-notification
 # in configure.ac
-
-%define		_snap 20040816
-
 Summary:	Volume control plugin for the XFce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce
 Name:		xfce4-mixer
-Version:	4.1.1
-Release:	0.%{_snap}.1
+Version:	4.1.90
+Release:	0.1
 License:	BSD
 Group:		X11/Applications/Sound
-Source0:	http://ep09.pld-linux.org/~havner/xfce4/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	b759db560b514f1b45aea9a7f680144f
+Source0:	ftp://ftp.berlios.de/pub/xfce-goodies/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	65c3c3cf870bae39612aaab63975031f
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf
@@ -35,7 +32,7 @@ xfce4-mixer to wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce. Zawiera
 prosty mikser d¼wiêku.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__libtoolize}

@@ -12,8 +12,11 @@ URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
+BuildRequires:	libxfce4mcs-devel >= %{version}
 BuildRequires:	pkgconfig >= 1:0.9.0
+BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	xfce4-panel-devel >= %{version}
 Requires:	alsa-lib >= 0.9.0
 Requires:	xfce4-panel >= %{version}

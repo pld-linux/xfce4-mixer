@@ -6,7 +6,7 @@ Release:	1
 License:	BSD
 Group:		X11/Applications/Sound
 #Source0:	ftp://ftp.berlios.de/pub/xfce-goodies/%{version}/%{name}-%{version}.tar.gz
-Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/%{version}/src/%{name}-%{version}.tar.gz
+Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
 # Source0-md5:	01d5e15d3740b87a8860557af07d5fbb
 URL:		http://www.xfce.org/
 BuildRequires:	automake

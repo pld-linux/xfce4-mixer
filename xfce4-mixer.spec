@@ -13,7 +13,7 @@ BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	pkgconfig >= 0.9.0
+BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	xfce4-panel-devel >= 4.1.0
 Requires:	alsa-lib >= 0.9.0
 Requires:	xfce4-panel >= 4.1.0

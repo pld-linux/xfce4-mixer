@@ -1,5 +1,5 @@
-Summary:	Volume control plugin for the XFce panel
-Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce
+Summary:	Volume control plugin for the Xfce panel
+Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce
 Name:		xfce4-mixer
 Version:	4.1.99.2
 Release:	2
@@ -20,11 +20,11 @@ Requires:	xfce4-panel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xfce4-mixer is the volume control plugin for the XFce panel.
+xfce4-mixer is the volume control plugin for the Xfce panel.
 Includes a simple sound mixer.
 
 %description -l pl
-xfce4-mixer to wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce. Zawiera
+xfce4-mixer to wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce. Zawiera
 prosty mikser d¼wiêku.
 
 %prep

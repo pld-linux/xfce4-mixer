@@ -8,6 +8,7 @@ Group:		X11/Applications/Sound
 Source0:	http://dl.sourceforge.net/xfce/%{name}-%{version}.tar.gz
 # Source0-md5:	e678f01cc0e510fe82cc5b40323c1088
 URL:		http://www.xfce.org/
+BuildRequires:	pkgconfig >= 0.9.0
 BuildRequires:	startup-notification-devel >= 0.4
 BuildRequires:	xfce4-panel-devel >= 0.10.1
 Requires:	startup-notification >= 0.4

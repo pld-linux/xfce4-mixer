@@ -11,12 +11,14 @@ Group:		X11/Applications/Sound
 Source0:	%{name}-snap-%{snap}.tar.bz2
 # Source0-md5:	62b794190eef15d56491f6fadbcf5a6b
 URL:		http://www.xfce.org/
+BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.9.0
 BuildRequires:	startup-notification-devel >= 0.4
 BuildRequires:	xfce4-panel-devel >= %{version}
+Requires:	alsa-lib >= 0.9.0
 Requires:	startup-notification >= 0.4
 Requires:	xfce4-panel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,7 +40,8 @@ prosty mikser d¼wiêku.
 %{__autoheader}
 %{__automake}
 %{__autoconf}
-%configure
+%configure \
+	--disable-static
 
 %{__make}
 

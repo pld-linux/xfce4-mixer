@@ -1,6 +1,3 @@
-#
-# TODO there's not a single word about startup-notification
-# in configure.ac
 Summary:	Volume control plugin for the XFce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce
 Name:		xfce4-mixer
@@ -17,10 +14,8 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.9.0
-#BuildRequires:	startup-notification-devel >= 0.4
 BuildRequires:	xfce4-panel-devel >= 4.1.0
 Requires:	alsa-lib >= 0.9.0
-#Requires:	startup-notification >= 0.4
 Requires:	xfce4-panel >= 4.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/*/*.{la,a}
+rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/*/*.la
 
 %find_lang %{name}
 
@@ -67,7 +62,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING README TODO
 %attr(755,root,root) %{_bindir}/xfce4-mixer
-%attr(755,root,root) %{_libdir}/xfce4/*/*.so*
+%attr(755,root,root) %{_libdir}/xfce4/mcs-plugins/*.so
+# why no -avoid-version?
+%attr(755,root,root) %{_libdir}/xfce4/modules/lib*.so*
+%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
 %{_iconsdir}/hicolor/*/*/*
 
 %{_desktopdir}/xfce-mixer-settings.desktop

@@ -31,7 +31,7 @@ prosty mikser d¼wiêku.
 %setup -q
 %patch0 -p1
 
-mv -f po/{no,nb}.po
+mv -f po/{nb_NO,nb}.po
 mv -f po/{pt_PT,pt}.po
 
 %build

@@ -1,12 +1,12 @@
---- xfce4-mixer-4.0.5/configure.ac.orig	Sun Mar 14 22:42:32 2004
-+++ xfce4-mixer-4.0.5/configure.ac	Thu Jul  8 16:03:13 2004
+--- xfce4-mixer-4.0.6/configure.ac.orig	2004-07-09 10:11:09.000000000 +0200
++++ xfce4-mixer-4.0.6/configure.ac	2004-07-12 18:16:53.754372128 +0200
 @@ -53,8 +53,8 @@
  fi
  
  dnl Check for i18n support
--BM_I18N([xfce4-mixer], [ar az bg ca cs de es fa_IR fr hi hu it ja ko lt ms nl
+-BM_I18N([xfce4-mixer], [ar az bg ca cs de es et eu fa_IR fr hi hu it ja ko lt ms nl
 -         no pl pt_BR pt_PT ru ta tr uk vi zh_CN zh_TW])
-+BM_I18N([xfce4-mixer], [ar az bg ca cs de es fa fr hi hu it ja ko lt ms nl
++BM_I18N([xfce4-mixer], [ar az bg ca cs de es et eu fa fr hi hu it ja ko lt ms nl
 +         nb pl pt_BR pt ru ta tr uk vi zh_CN zh_TW])
  
  dnl configure the panel plugin

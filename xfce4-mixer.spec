@@ -10,9 +10,9 @@ Source0:	http://www.xfce.org/archive/xfce4-rc3/src/%{name}-%{version}.tar.gz
 URL:		http://www.xfce.org/
 BuildRequires:	pkgconfig >= 0.9.0
 BuildRequires:	startup-notification-devel >= 0.4
-BuildRequires:	xfce4-panel-devel >= 3.99.2
+BuildRequires:	xfce4-panel-devel >= 3.99.3
 Requires:	startup-notification >= 0.4
-Requires:	xfce4-panel >= 3.99.2
+Requires:	xfce4-panel >= 3.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

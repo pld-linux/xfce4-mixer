@@ -1,26 +1,29 @@
+#
+# TODO there's not a single word about startup-notification
+# in configure.ac
 
-%define		_snap 20040806
+%define		_snap 20040813
 
 Summary:	Volume control plugin for the XFce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce
 Name:		xfce4-mixer
-Version:	4.2.0
+Version:	4.1.1
 Release:	0.%{_snap}.1
 License:	BSD
 Group:		X11/Applications/Sound
 Source0:	http://ep09.pld-linux.org/~havner/xfce4/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	90c7df7024eb97dbd569caa1ec2b6b12
+# Source0-md5:	73b94049088faca2c4a33bc594ae4eff
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.9.0
-BuildRequires:	startup-notification-devel >= 0.4
-BuildRequires:	xfce4-panel-devel >= %{version}
+#BuildRequires:	startup-notification-devel >= 0.4
+BuildRequires:	xfce4-panel-devel >= 4.1.0
 Requires:	alsa-lib >= 0.9.0
-Requires:	startup-notification >= 0.4
-Requires:	xfce4-panel >= %{version}
+#Requires:	startup-notification >= 0.4
+Requires:	xfce4-panel >= 4.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

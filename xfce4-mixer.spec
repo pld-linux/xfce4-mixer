@@ -1,12 +1,12 @@
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.2.0
+Version:	4.2.1
 Release:	1
 License:	BSD
 Group:		X11/Applications/Sound
-Source0:	http://www.us.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.gz
-# Source0-md5:	285d7dcd493533a019637d87eccd8b12
+Source0:        http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
+# Source0-md5:	488b6d2a6328a7b00dcc4781d388d604
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0

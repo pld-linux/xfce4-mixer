@@ -2,7 +2,7 @@
 # TODO there's not a single word about startup-notification
 # in configure.ac
 
-%define		_snap 20040813
+%define		_snap 20040816
 
 Summary:	Volume control plugin for the XFce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu XFce
@@ -12,7 +12,7 @@ Release:	0.%{_snap}.1
 License:	BSD
 Group:		X11/Applications/Sound
 Source0:	http://ep09.pld-linux.org/~havner/xfce4/%{name}-%{_snap}.tar.bz2
-# Source0-md5:	73b94049088faca2c4a33bc594ae4eff
+# Source0-md5:	b759db560b514f1b45aea9a7f680144f
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf

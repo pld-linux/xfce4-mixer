@@ -14,9 +14,9 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.9.0
-BuildRequires:	xfce4-panel-devel >= 4.1.0
+BuildRequires:	xfce4-panel-devel >= %{version}
 Requires:	alsa-lib >= 0.9.0
-Requires:	xfce4-panel >= 4.1.0
+Requires:	xfce4-panel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

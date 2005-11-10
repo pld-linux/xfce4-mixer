@@ -1,14 +1,11 @@
-diff -urN xfce4-mixer-4.2.2/configure.ac fix/xfce4-mixer-4.2.2/configure.ac
---- xfce4-mixer-4.2.2/configure.ac	2005-05-15 10:16:33.000000000 +0200
-+++ fix/xfce4-mixer-4.2.2/configure.ac	2005-05-20 05:51:19.000000000 +0200
-@@ -68,8 +68,8 @@
- 
+--- xfce4-mixer-4.2.3/configure.ac.orig	2005-11-05 18:07:03.000000000 +0100
++++ xfce4-mixer-4.2.3/configure.ac	2005-11-10 06:49:41.000000000 +0100
+@@ -69,7 +69,7 @@
  dnl Check for i18n support
- BM_I18N([xfce4-mixer], [ar az be bg bn_IN ca da de el en_GB es es_MX et eu fa
--                        fi fr gu he hu it ja ko lt mr ms nl nb_NO pa pt_BR
--			pt_PT ro ru sk tr vi zh_CN zh_TW])
-+                        fi fr gu he hu it ja ko lt mr ms nl nb pa pt_BR
-+			pt ro ru sk tr vi zh_CN zh_TW])
+ BM_I18N([xfce4-mixer], [af ar az be bg bn_IN ca cs da de el en_GB es es_MX
+                         et eu fa fi fr gu he hi hu hy it ja ko ku lt mr ms
+-                        nb_NO nl pa pl pt_BR pt_PT ro ru sk sl sv ta tr uk
++                        nb nl pa pl pt_BR pt ro ru sk sl sv ta tr uk
+                         vi zh_CN zh_TW])
  
  BM_DEPEND([XML], [libxml-2.0], [2.4.0])
- BM_DEPEND([XFCE4_UTIL], [libxfce4util-1.0], [4.2.0])

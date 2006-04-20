@@ -5,7 +5,7 @@ Version:	4.2.3
 Release:	1
 License:	BSD
 Group:		X11/Applications/Sound
-Source0:        http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
+Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
 # Source0-md5:	b57fd602b3612fb84a92b124f3468511
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/

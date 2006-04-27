@@ -1,12 +1,12 @@
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.2.3
+Version:	4.3.90.1
 Release:	1
 License:	BSD
 Group:		X11/Applications/Sound
-Source0:	http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-%{version}/src/%{name}-%{version}.tar.gz
-# Source0-md5:	b57fd602b3612fb84a92b124f3468511
+Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
+# Source0-md5:	6f149f982d7833d043c9240453ae5a02
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 0.9.0
@@ -17,7 +17,7 @@ BuildRequires:	libtool
 BuildRequires:	libxfce4mcs-devel >= %{version}
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
-BuildRequires:	xfce4-dev-tools
+BuildRequires:	xfce4-dev-tools >= %{version}
 BuildRequires:	xfce4-panel-devel >= %{version}
 Requires:	alsa-lib >= 0.9.0
 Requires:	xfce4-panel >= %{version}
@@ -69,7 +69,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/xfce4/mcs-plugins/*.so
 # why no -avoid-version?
 %attr(755,root,root) %{_libdir}/xfce4/modules/lib*.so*
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
+%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/xfce4-mixer-plugin
+%{_datadir}/xfce4/panel-plugins/xfce4-mixer.desktop
 %{_iconsdir}/hicolor/*/*/*
 
 %{_desktopdir}/xfce-mixer-settings.desktop

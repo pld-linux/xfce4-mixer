@@ -45,7 +45,8 @@ mv -f po/{pt_PT,pt}.po
 %{__automake}
 %{__autoconf}
 %configure \
-	--disable-static
+	--disable-static \
+	--with-sound=alsa
 
 %{__make}
 

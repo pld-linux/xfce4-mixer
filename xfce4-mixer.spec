@@ -22,7 +22,9 @@ BuildRequires:	xfce4-dev-tools >= %{version}
 BuildRequires:	xfce4-panel-devel >= %{version}
 BuildRequires:	xfce-mcs-manager-devel >= %{version}
 Requires(post,postun):	gtk+2 >= 2:2.10.0
+Requires(post,postun):	hicolor-icon-theme
 Requires:	alsa-lib >= 1.0.11
+Requires):	gtk+2 >= 2:2.10.0
 Requires:	xfce4-panel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

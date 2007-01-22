@@ -1,12 +1,12 @@
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl):	Wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.3.99.2
+Version:	4.4.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	9648fc403f9eb4baede230644bf5638d
+# Source0-md5:	195e52cfe7913ca0b97d20a7ca26bde7
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.xfce.org/
 BuildRequires:	alsa-lib-devel >= 1.0.11
@@ -18,19 +18,18 @@ BuildRequires:	libtool
 BuildRequires:	libxfce4mcs-devel >= %{version}
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	rpmbuild(macros) >= 1.311
+BuildRequires:	xfce-mcs-manager-devel >= %{version}
 BuildRequires:	xfce4-dev-tools >= %{version}
 BuildRequires:	xfce4-panel-devel >= %{version}
-BuildRequires:	xfce-mcs-manager-devel >= %{version}
-Requires(post,postun):	gtk+2 >= 2:2.10.6
+Requires(post,postun):	gtk+2
 Requires(post,postun):	hicolor-icon-theme
 Requires:	alsa-lib >= 1.0.11
-Requires:	gtk+2 >= 2:2.10.6
 Requires:	xfce4-panel >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xfce4-mixer is the volume control plugin for the Xfce panel.
-Includes a simple sound mixer.
+xfce4-mixer is the volume control plugin for the Xfce panel. Includes
+a simple sound mixer.
 
 %description -l pl
 xfce4-mixer to wtyczka steruj±ca g³o¶no¶ci± dla panelu Xfce. Zawiera
@@ -52,7 +51,7 @@ mv -f po/{pt_PT,pt}.po
 %configure \
 	--disable-static \
 	--with-sound=alsa
-	
+
 %{__make}
 
 %install

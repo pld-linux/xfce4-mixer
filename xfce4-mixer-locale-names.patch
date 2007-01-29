@@ -1,11 +1,12 @@
---- xfce4-mixer-4.2.3/configure.ac.orig	2005-11-05 18:07:03.000000000 +0100
-+++ xfce4-mixer-4.2.3/configure.ac	2005-11-10 06:49:41.000000000 +0100
-@@ -69,7 +69,7 @@
- dnl Check for i18n support
- BM_I18N([xfce4-mixer], [af ar az be bg bn_IN ca cs da de el en_GB es es_MX
-                         et eu fa fi fr gu he hi hu hy it ja ko ku lt mr ms
--                        nb_NO nl pa pl pt_BR pt_PT ro ru sk sl sv ta tr uk
-+                        nb nl pa pl pt_BR pt ro ru sk sl sv ta tr uk
-                         vi zh_CN zh_TW])
+diff -urN xfce4-mixer-4.4.0/configure.in xfce4-mixer-4.4.0.new/configure.in
+--- xfce4-mixer-4.4.0/configure.in	2007-01-22 18:20:06.000000000 +0100
++++ xfce4-mixer-4.4.0.new/configure.in	2007-01-22 18:21:08.000000000 +0100
+@@ -82,7 +82,7 @@
+ XDT_XFCE_MCS_PLUGIN([XFCE_MCS_MANAGER], [4.4.0])
  
- BM_DEPEND([XML], [libxml-2.0], [2.4.0])
+ dnl Check for i18n support
+-XDT_I18N([ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb_NO pa pl pt_BR pt_PT ro ru sk sv ta tr uk vi zh_CN zh_TW])
++XDT_I18N([ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb pa pl pt_BR pt ro ru sk sv ta tr uk vi zh_CN zh_TW])
+ 
+ AC_MSG_CHECKING([whether to build big mixer window])
+ AC_ARG_ENABLE([big-mixer],

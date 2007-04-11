@@ -1,0 +1,18 @@
+diff -urN xfce4-mixer-4.4.0/configure.in xfce4-mixer-4.4.0.new/configure.in
+--- xfce4-mixer-4.4.0/configure.in	2007-01-22 18:20:06.000000000 +0100
++++ xfce4-mixer-4.4.0.new/configure.in	2007-01-22 18:21:08.000000000 +0100
+@@ -82,7 +82,7 @@
+ XDT_XFCE_MCS_PLUGIN([XFCE_MCS_MANAGER], [4.4.0])
+ 
+ dnl Check for i18n support
+-XDT_I18N([ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb_NO pa pl pt_BR pt_PT ro ru sk sv ta tr uk vi zh_CN zh_TW])
++XDT_I18N([ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb pa pl pt_BR pt ro ru sk sv ta tr uk vi zh_CN zh_TW])
+ 
+ AC_MSG_CHECKING([whether to build big mixer window])
+ AC_ARG_ENABLE([big-mixer],
+--- xfce4-mixer-4.4.1/po/LINGUAS.orig	2007-04-11 20:30:19.000000000 +0200
++++ xfce4-mixer-4.4.1/po/LINGUAS	2007-04-11 20:30:41.000000000 +0200
+@@ -1,2 +1,2 @@
+ # set of available languages (in alphabetic order)
+-ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb_NO pa pl pt_BR pt_PT ro ru sk sv ta tr uk vi zh_CN zh_TW
++ar az be bg bn_IN ca cs de dz el en_GB es es_MX et eu fa fi fr gl gu he hi hu hy it ja ka ko lt mk mr ms nl nb pa pl pt_BR pt ro ru sk sv ta tr uk vi zh_CN zh_TW

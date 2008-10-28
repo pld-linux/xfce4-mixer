@@ -53,7 +53,7 @@ mv -f po/{pt_PT,pt}.po
 	--disable-static \
 	--with-sound=alsa
 
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT

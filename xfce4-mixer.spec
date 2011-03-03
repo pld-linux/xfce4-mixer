@@ -1,13 +1,12 @@
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sterująca głośnością dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.6.1
-Release:	3
+Version:	4.8.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	a99e2455445480ef5081fe69454a46fc
-Patch0:		%{name}-ui.patch
+Source0:	http://www.xfce.org/archive/src/apps/xfce4-mixer/4.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	3fa3a9973e18c04da26709a654e242ff
 URL:		http://www.xfce.org/projects/xfce4-mixer/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -34,15 +33,8 @@ prosty mikser dźwięku.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-%{__intltoolize}
-%{__libtoolize}
-%{__aclocal}
-%{__autoheader}
-%{__automake}
-%{__autoconf}
 %configure
 %{__make}
 

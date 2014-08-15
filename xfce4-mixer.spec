@@ -1,12 +1,13 @@
+%define		xfce_version	4.11.0
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sterująca głośnością dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.8.0
-Release:	3
+Version:	4.11.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://www.xfce.org/archive/src/apps/xfce4-mixer/4.8/%{name}-%{version}.tar.bz2
-# Source0-md5:	3fa3a9973e18c04da26709a654e242ff
+Source0:	http://archive.xfce.org/src/apps/xfce4-mixer/4.11/%{name}-%{version}.tar.bz2
+# Source0-md5:	1b3753b91224867a3a2dfddda239c28d
 URL:		http://www.xfce.org/projects/xfce4-mixer/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -15,12 +16,13 @@ BuildRequires:	gstreamer-plugins-base-devel >= 0.10.14
 BuildRequires:	gtk+2-devel >= 2:2.10.6
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= %{version}
+BuildRequires:	libxfce4ui-devel >= %{xfce_version}
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	xfce4-dev-tools >= 4.6.0
-BuildRequires:	xfce4-panel-devel >= %{version}
-BuildRequires:	xfconf-devel >= %{version}
-Requires:	xfce4-panel >= %{version}
+BuildRequires:	xfce4-panel-devel >= %{xfce_version}
+#BuildRequires:	xfconf-devel >= %{version}
+BuildRequires:	xfconf-devel >= 4.10.0
+Requires:	xfce4-panel >= %{xfce_version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,6 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libmixer.la
 
 %find_lang %{name}
 
@@ -53,10 +56,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/xfce4-mixer
-%attr(755,root,root) %{_libdir}/xfce4/panel-plugins/xfce4-mixer-plugin
-%{_datadir}/xfce4/panel-plugins/xfce4-mixer-plugin.desktop
+%attr(755,root,root) %{_libdir}/xfce4/panel/plugins/libmixer.so
+%{_datadir}/xfce4/panel/plugins/mixer.desktop
 %{_datadir}/xfce4-mixer
 %{_desktopdir}/xfce4-mixer.desktop
 %{_pixmapsdir}/xfce4-mixer
+%{_mandir}/man1/xfce4-mixer.1*

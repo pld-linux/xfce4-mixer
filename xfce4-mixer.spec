@@ -11,7 +11,7 @@ Source0:	http://archive.xfce.org/src/apps/xfce4-mixer/4.11/%{name}-%{version}.ta
 URL:		http://www.xfce.org/projects/xfce4-mixer/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gstreamer0.10-plugins-base-devel >= 0.10.25
 BuildRequires:	gtk+2-devel >= 2:2.10.6
 BuildRequires:	intltool >= 0.35.0

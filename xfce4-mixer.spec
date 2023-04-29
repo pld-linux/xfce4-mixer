@@ -1,25 +1,30 @@
+# ToDo: fix segfaults while adding plugin to panel
+
 %define		xfce_version	4.12.0
 Summary:	Volume control plugin for the Xfce panel
 Summary(pl.UTF-8):	Wtyczka sterująca głośnością dla panelu Xfce
 Name:		xfce4-mixer
-Version:	4.11.0
-Release:	10
+Version:	4.18.0
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://archive.xfce.org/src/apps/xfce4-mixer/4.11/%{name}-%{version}.tar.bz2
-# Source0-md5:	1b3753b91224867a3a2dfddda239c28d
-Patch0:		git.patch
-URL:		http://www.xfce.org/projects/xfce4-mixer/
+Source0:	https://archive.xfce.org/src/apps/xfce4-mixer/4.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	bed60dfc288d9e6586c0d38707ffc588
+URL:		https://www.xfce.org/projects/xfce4-mixer/
+BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-tools
-BuildRequires:	gstreamer0.10-plugins-base-devel >= 0.10.25
-BuildRequires:	gtk+2-devel >= 2:2.10.6
+BuildRequires:	glib2-devel >= 1:2.42.0
+BuildRequires:	gstreamer-plugins-base-devel >= 1.0
+BuildRequires:	gtk+3-devel >= 3.14.0
 BuildRequires:	intltool >= 0.35.0
+BuildRequires:	keybinder3-devel >= 0.3
 BuildRequires:	libtool
 BuildRequires:	libxfce4ui-devel >= %{xfce_version}
 BuildRequires:	pkgconfig >= 1:0.9.0
-BuildRequires:	xfce4-dev-tools >= 4.6.0
+BuildRequires:	pulseaudio-devel >= 0.9.19
+BuildRequires:	xfce4-dev-tools >= 4.12.0
 BuildRequires:	xfce4-panel-devel >= %{xfce_version}
 BuildRequires:	xfconf-devel >= %{xfce_version}
 Requires:	xfce4-panel >= %{xfce_version}
@@ -35,7 +40,6 @@ prosty mikser dźwięku.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -53,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/ur_PK
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{fa_IR,hy_AM,hye,ie,ur_PK}
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/xfce4/panel/plugins/libmixer.la
 
 %find_lang %{name}
